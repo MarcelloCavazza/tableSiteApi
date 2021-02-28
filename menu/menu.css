@@ -3,15 +3,15 @@ body{
 }
 #title{
     font-family: 'Noto Sans JP', sans-serif;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 180px;
-    border: 1px solid rgb(0, 0, 0);
-    background-color: #f1f1f1;
+    width: 340px;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: #000000;
   }
 .activelocation {
     background-color: #E1B787;
@@ -23,13 +23,13 @@ li{
   }
 li a {
     display: block;
-    color: #000;
+    color: rgb(255, 255, 255);
     padding: 4px 8px;
-    border: 1px #000;
+    border: 1px rgb(255, 255, 255);
     text-decoration: none;
     text-align:center
 }
-#Menu{
+#MenuLocation{
     height: 421px;
     width: 200px;
     left: -309px;
