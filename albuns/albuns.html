@@ -4,29 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Álbuns</title>
+    <title>Albuns</title>
     <script src="albuns.js"></script>
+    <link rel="stylesheet" href="albuns.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
 </head>
-<body>
+<body>    
+    <section>
+        <ul >
+            <li><a id="body" value="Menu" onclick="document.location='../menu/menu.html'">Menu</a></li>
+            <li><a id="body" value="postagens" onclick="document.location='../postagens/postagens.html'">Postagens</a></li>
+            <li><a id="body" value="to-dos" onclick="document.location='../to-dos/to-dos.html'">To-Dos</a></li>
+            <li><a id="body" value="limpar" onclick="limpar()">Limpar</a></li>
+            <li><a id="body" value="Recarregar" onclick="getData()">Recarregar</a></li>
+            <li style="float:right"><a id="body" value="albuns" class="active" >Albuns</a></li>
+        </ul>
+        
+    </section>
+    <br>
+    <br>
     <main>
-        <table border="1px">
+    <center>
+       <table class="tabelastyle">
             <thead>
                 <tr>
-                    <th>Title</th>
+                    <th id="title">Albuns</th>
                 </tr>
             </thead>
-            <tbody id="table">
+            <tbody id="table" id="body">
             </tbody>
-        </table>
+        </table> 
+    </center>
     </main>
-    <button onclick="document.location='../menu/menu.html'">
-        Menu
-    </button>
-    <button value="Limpar" onclick="limpar()"> 
-        Remover
-    </button>
-    <button value="Limpar" onclick="getData()"> 
-        Recarregar
-    </button>
+    <section>
 </body>
 </html>
