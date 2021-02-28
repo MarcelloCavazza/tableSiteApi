@@ -4,22 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="postagens.css" ></link>
     <title>Postagens</title>
     <script src="posts.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main>
-        <table border="1px">
-            <thead>
-                <tr>
-                    <th>Title</th>
-                    <th>Body</th>
-                </tr>
-            </thead>
-            <tbody id="table">
-            </tbody>
-        </table>
-    </main>
     <section>
         <button onclick="document.location='../menu/menu.html'">
             Menu
@@ -27,10 +20,25 @@
         <button value="Limpar" onclick="limpar()"> 
             Remover
         </button>
-
         <button value="Recarregar" onclick="getData()"> 
             Recarregar
         </button>
+    </section>
+    <br>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th id="title">Title</th>
+                    <th id="title">Body</th>
+                </tr>
+            </thead>
+            <tbody id="table">
+            </tbody>
+        </table>
+    </main>
+    <section>
+        
     </section>
 </body>
 </html>
