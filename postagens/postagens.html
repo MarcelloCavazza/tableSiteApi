@@ -4,41 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="postagens.css" ></link>
-    <title>Postagens</title>
-    <script src="posts.js"></script>
+    <title>TO-DOs</title>
+    <script src="postagens.js"></script>
+    <link rel="stylesheet" href="postagens.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
 </head>
-<body>
+<body>    
     <section>
-        <button onclick="document.location='../menu/menu.html'">
-            Menu
-        </button>
-        <button value="Limpar" onclick="limpar()"> 
-            Remover
-        </button>
-        <button value="Recarregar" onclick="getData()"> 
-            Recarregar
-        </button>
-    </section>
-    <br>
-    <main>
-        <table>
-            <thead>
-                <tr>
-                    <th id="title">Title</th>
-                    <th id="title">Body</th>
-                </tr>
-            </thead>
-            <tbody id="table">
-            </tbody>
-        </table>
-    </main>
-    <section>
+        <ul >
+            <li><a id="body" value="Menu" onclick="document.location='../menu/menu.html'">Menu</a></li>
+            <li><a id="body" value="to-dos" onclick="document.location='../to-dos/to-dos.html'">To-Dos</a></li>
+            <li><a id="body" value="albuns" onclick="document.location='../albuns/albuns.html'">Albuns</a></li>
+            <li><a id="body" value="limpar" onclick="limpar()">Limpar</a></li>
+            <li><a id="body" value="Recarregar" onclick="getData()">Recarregar</a></li>
+            <li style="float:right"><a id="body" value="postagens" class="active" >Postagens</a></li>
+        </ul>
         
     </section>
+    <br>
+    <br>
+    <main>
+    <center>
+       <table>
+            <thead>
+                <tr>
+                    <th id="title">Título</th>
+                    <th id="title">Corpo</th> 
+                </tr>
+            </thead>
+            <tbody id="table" id="body">
+            </tbody>
+        </table> 
+    </center>
+    </main>
+    <section>
 </body>
 </html>
