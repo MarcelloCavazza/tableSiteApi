@@ -1,12 +1,16 @@
 const api_url = "https://jsonplaceholder.typicode.com/users/1/todos";
+var pode = false;
 async  function getData(){
-    const reponse = await fetch(api_url);
-    const data = await reponse.json();
-    const table = document.getElementById('table');
-    data.forEach(post =>  {
+    if(pode == false){
+        const reponse = await fetch(api_url);
+        const data = await reponse.json();
+        const table = document.getElementById('table');
+        data.forEach(post =>  {
         let tr = createTrForTable(post.id, post.title, post.completed)
         table.appendChild(tr);
-    });
+        });
+        pode = true;
+    }
 }
 getData();
 function createTrForTable(id, title, completed)
@@ -42,5 +46,9 @@ function createTrForTable(id, title, completed)
     return tr;
 }
 function limpar(){
-    document.getElementById('table').innerHTML = '';
+    if(pode == true){
+        document.getElementById('table').innerHTML = '';
+        pode = false
+    }
+    
 }

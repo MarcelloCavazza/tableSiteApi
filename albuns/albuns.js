@@ -1,13 +1,17 @@
 const api_url = "https://jsonplaceholder.typicode.com/users/1/albums";
+var pode = false;
 async function getData(){
-    const response = await fetch(api_url);
-    const data = await  response.json();
-    const table = document.getElementById('table');
-
-    data.forEach(post => {
+    if(pode == false){
+        const response = await fetch(api_url);
+        const data = await  response.json();
+        const table = document.getElementById('table');
+        data.forEach(post => {
         let tr = createTrForTable(post.id, post.title)
         table.appendChild(tr);
-    });
+        });
+        pode = true
+    }
+    
 }
 getData();
 
@@ -28,5 +32,8 @@ function createTrForTable(id, title){
 }
 
 function limpar(){
-    document.getElementById('table').innerHTML = '';
+    if(pode == true){
+      document.getElementById('table').innerHTML = '';
+      pode = false;  
+    }
 }
