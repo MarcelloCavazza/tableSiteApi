@@ -2,5 +2,3 @@
 jsonplaceholder)
 
 -arquivo inicial na pasta menu
-
--Link do site hosteado: https://tabelasresponsivas.000webhostapp.com/
